@@ -1,0 +1,150 @@
+body{
+   /* Establece el degradado de fondo */
+   background: linear-gradient(to bottom, #ffffff, #c0d2ee, #ffffff);
+   /* Fallback para navegadores que no admiten degradados */
+   background: -webkit-linear-gradient(top, #ffffff,  #c0d2ee, #ffffff);
+   background: -moz-linear-gradient(top, #ffffff,  #c0d2ee, #ffffff);
+   background: -o-linear-gradient(top, #ffffff,  #c0d2ee, #ffff00);
+   background-repeat: no-repeat;
+}
+#logo{
+    transition: transform 1.5s;
+  }
+  
+  .girar {
+    transform: rotate(360deg);
+  }
+
+  .header {
+    color: #36A0FF;
+    font-size: 27px;
+    padding: 10px;
+}
+
+h1{
+  color: #92B4EC;
+    
+    padding: 10px;
+}
+
+p{
+  color: #36A0FF;
+    
+  font-size: 25px;
+}
+.bigicon {
+    font-size: 35px;
+    color: #36A0FF;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+  max-height: 200px; /* Ajusta la altura máxima según tus necesidades */
+}
+
+
+/*Estilo del navBar*/
+.navbar{
+  background-color: #FFFF;
+  border-bottom: 1px solid #92B4EC;
+  font-family: 'Roboto', sans-serif;
+  
+}
+ /*Tamaño de Letras Nav Principal*/
+  .navbar-brand .letraTexto{
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /*Tamaño de todas las letras del nav sin incluir Portfolio*/
+  .navbar-nav.letrasNav{
+    font-size: 20px;
+  }
+  @media only screen and (max-width: 14400px) and (min-width: 993px){
+  .nav-link.letra:hover{
+    border-bottom: 1px solid #92B4EC;
+    transition: all 1.5s ease;
+    color: #FFD24C;
+    
+  }
+  
+ 
+}
+/*Color de letras del nav (dentro del nav) con hover*/
+.nav-link.letra:hover{
+  color: #FFD24C;
+  
+}
+/*Color de letras del nav (dentro del nav)*/
+.nav-link.letra{
+  color: #92B4EC;
+  
+}
+
+.dropdown-item.letra{
+  color: #92B4EC;
+}
+.dropdown-item.letra:hover{
+  color: #FFD24C;
+  
+}
+/*Color de Portfolio (dentro del nav)*/
+.letraTexto{
+  color:#92B4EC;
+  
+}
+
+ .bg-text:hover{
+  color: #FFE69A;
+  transition: all 2s ease;
+  
+ }
+
+ .nav-link.letra.active{
+  color:#FFD24C;
+  
+ }
+ /*Estilo formulario login*/
+ .tituloabout{
+  color: #92B4EC;
+      font-size: 35px;
+      font-family: 'Roboto', sans-serif;
+ }
+
+ #loginForm{
+        background-color: #eeee;
+        margin-bottom: 8%;
+ }
+
+
+ /*Estilo formulario login*/
+
+   /*Animación*/
+   .floating-text {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    animation: floatAnimation 4s infinite;
+
+    text-shadow:
+    -2px -2px 0 white,
+    2px -2px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+  }
+
+  @keyframes floatAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+   
+    /*Animación*/
+

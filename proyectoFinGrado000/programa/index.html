@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina web Daniel Toucedo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+ <div class="container-fluid">
+   
+       <!--Nav Bar--> 
+       <div class="row sticky-lg-top  ">
+        
+        <nav class="navbar navbar-expand-lg  d-flex  header-scrolled navbar-light bg-light">
+          <div class="container-fluid ">
+            <a class="navbar-brand" href="index.html">
+              <img id="logo" src="./fotos/logo.png" alt="logo" width="60" height="60">
+              <span class="letraTexto">Gestión Daniel Toucedo</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end me-lg-5  " id="navbarNavAltMarkup">
+              <ul class="navbar-nav letrasNav">
+                <li class="nav-item">
+                  <a class="nav-link letra" id="loginnav" aria-current="page" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link letra" id="registronav" href="registro.html">Registro de usuarios</a>
+                </li>
+                <li class="nav-item" id="cerrar">
+                  <a class="nav-link letra"  >Cerrar sesión</a>
+                </li>
+                <li class="nav-item dropdown" id="usuariologin">
+                  <a class="nav-link letra dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     Menú clientes logueados
+                    </a>
+                    <ul class="dropdown-menu">  
+                      <li id="misdatos"><a class="dropdown-item letra" href="#">Mis datos</a></li>
+                      <li id="mifamilia"><a class="dropdown-item letra" href="#">Mi familia</a></li>
+                      <li id="misviviendas"><a class="dropdown-item letra" href="#">Mis viviendas</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown" id="adminlogin">
+                  <a class="nav-link letra dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Menú administradores logueados
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li id="misdatosadmin"><a class="dropdown-item letra" href="#">Mis datos</a></li>
+                    <li id="listadoPropietaros"><a class="dropdown-item letra" href="#">Listado propietarios</a></li>
+                    <li id="listadoViviendas"><a class="dropdown-item letra" href="#">Listado viviendas</a></li>
+                    <li id="familiasAdmin"><a class="dropdown-item letra" href="#">Familias</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown" id="encargadologin">
+                  <a class="nav-link letra dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Menú encargados logueados
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li id="viviendasEncargado"><a class="dropdown-item letra" href="#">Viviendas</a></li>
+                    <li id="misdatosEncargado"><a class="dropdown-item letra" href="#">Mis datos</a></li>
+                    <li id="listadoViviendasEncargado"><a class="dropdown-item letra" href="#">Listado viviendas(PDF)</a></li>
+                    <li id="listadoPropietarosEncargado"><a class="dropdown-item letra" href="#">Listado propietarios(PDF)</a></li>
+                    <li id="buscarUsuariosEncargado"><a class="dropdown-item letra" href="#">Búsquedas usuarios</a></li>
+                    <li id="modTitularidadEncargado"><a class="dropdown-item letra" href="#">Modificaciones titularidad</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      
+     </div>
+    
+    <!-- Fin del Nav Bar -->
+   
+    <!--Mis datos--> 
+      <div id="formDatosModificar">
+        <form class="formulario mt-5 mb-5 " id="FormModificar" name="FormModificarDatos" >
+          <div class="row d-flex justify-content-center text-center mt-5 mb-5  ">
+            <div class="col-10 col-lg-10 card">
+            <h1 id="campoInformacionUsuario" ></h1>
+              <div class="col-12 mt-4 mt-lg-0 col-lg-12 mb-lg-4 d-flex justify-content-center ">
+                  
+                  <input id="campoDniUsuario" type="text" value="" name="dniUsuario" placeholder="Dni" class="form-control" >
+              
+              </div>
+              <div class="col-12 mt-4 mt-lg-0 col-lg-12 mb-lg-4 d-flex justify-content-center ">
+                 
+                <input id="campoNombreUsuario" type="text" value="" name="nombreUsuario" placeholder="Nombre" class="form-control">
+                  
+              </div>
+              <div class="col-12 mt-4 mt-lg-0 col-lg-12 mb-lg-4 d-flex justify-content-center ">
+                 
+                <input id="campoApellidosUsuario"  type="text" placeholder="Apellidos" name="apellidos" class="form-control">
+                  
+              </div>
+              <div class="col-12 mt-4 mt-lg-0 col-lg-12 mb-lg-4 d-flex justify-content-center ">
+
+                <input id="campoContrasenaUsuario" type="text" name="password" placeholder="contraseña" class="form-control">
+
+              </div>
+
+              <div class="col-12 mt-4 mt-lg-0 col-lg-12 mb-lg-4 d-flex justify-content-center  ">
+
+                <input id="campoGeneroUsuario" type="text" placeholder="genero" name="genero" class="form-control">
+
+              </div>
+
+              <div class="col-12 text-center mt-5 mb-5 ">
+                  <button id="modiDatos" class="btn btn-outline-primary" type="submit" >Modificar Datos</button>
+                </div>
+              
+          </div>
+        </div>
+      </form>
+      </div>
+    <!--Mis datos--> 
+
+    <!--Mis Familia--> 
+    <div id="formDatosFamilia">
+     
+        <div class="row d-flex justify-content-center text-center mt-5 mb-5 ">
+          <di class="col-12 col-lg-10 card">
+            <h1>Miembros Familia</h1>
+            <table class="table">
+                <tr>
+                  <th scope="col">Dni</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Apellidos</th>
+                  <th scope="col">CabezaF</th>
+                 
+                </tr>
+              <tbody id="cuerpoTablaFamilias">
+      
+              </tbody>
+            </table>
+            <div class="input-group mb-3 mt-5">
+        
+              <input type="number" class="form-control "id="dniNuevoFamiliar" placeholder="78250321" aria-label="78250321" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <span class="input-group-text" >Dni usuario</span>
+              </div>
+            </div>
+
+            <div class="input-group mb-3 ">
+              <input type="text" class="form-control" id="nombreNuevoFamiliar" placeholder="Pepe" aria-label="Pepe" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <span class="input-group-text" >Nombre usuario</span>
+              </div>
+            </div>
+      
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" id="apellidosNuevoFamiliar" placeholder="Perez Garcia" aria-label="Perez Garcia" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <span class="input-group-text" >Apellidos usuario</span>
+              </div>
+            </div>
+
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" id="generoNuevoFamiliar" placeholder="M | H | O" aria-label="M | H | O" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <span class="input-group-text" >Genero</span>
+              </div>
+            </div>
+            <p><button type="button" class="btn btn-primary" id="anadirMiembroFamilia">Añadir</button></p>
+          </div>
+        </div>
+    
+    <!--Mis Familia--> 
+
+    <!--Listado Viviendas --> 
+    <div id="formDatosListadoViviendas">
+      <form class="formulario mt-5 mb-1 " id="" name="">
+        <div class="row d-flex justify-content-center ">
+          <legend id="campoInformacionViviendas" class="text-center header"></legend>
+          <div class="col-lg-10 col-12 text-center mt-5 mb-5 ">
+            <select id="comboZonas" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+              <option selected>Seleccione una Zona</option>
+            </select>
+            <div id="tablaListadoViviendas" class="mt-5 card">
+     
+              <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Calle</th>
+                    <th scope="col">Codigo Postal</th>
+                    <th scope="col">Metros</th>
+                    <th scope="col">Nombre Zona</th>
+                    <th scope="col">Numero</th>
+                    <th scope="col">Tipo Vivienda</th>
+                  </tr>
+                </thead>
+                <tbody id="cuerpoTablaViviendas">
+                  
+                </tbody>
+              </table>
+              </div>
+          </div>
+    </form>
+    </div>
+ </div>
+  <!--Listado Viviendas--> 
+
+  <!--Lista viviendas Modificar-->
+  
+
+  <div id="tablaListadoViviendasGerente">
+    <form>
+      
+    <div class="row d-flex justify-content-center ">
+      <div class="col-lg-10 col-12   text-center mt-5 mb-5 card">
+    <h1>Administrar Viviendas</h1>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Calle</th>
+          <th scope="col">Numero</th>
+          <th scope="col">Tipo Vivienda</th>
+          <th scope="col">Codigo Postal</th>
+          <th scope="col">Metros</th>
+          <th scope="col">Nombre Zona</th>
+          <th scope="col">Editar</th>
+        </tr>
+      </thead>
+      <tbody id="cuerpotablaListadoViviendasGerente">
+      
+      </tbody>
+    </table>
+  </form>
+
+  <p>Añadir nueva vivienda:<button type="button" class="btn btn-primary" id="btnAnadirPiso">Piso</button> <button id="btnAnadirCasa" type="button" class="btn btn-primary">Casa</button></p>
+  </div>
+ 
+</div>
+</div>
+  <!--Lista viviendas Modificar--> 
+
+  <!--Añadir casa particular--> 
+    <div id="divAnadirCasaParticular">
+      <form>
+      <div class="row d-flex justify-content-center ">
+        <div class="col-lg-10 col-10   text-center mt-5 mb-5 card">
+          <h1>Añadir Casa</h1>
+          <div class="input-group mb-3">
+            <input id="CalleCasaParticular" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <span class="input-group-text" id="basic-addon2">Calle</span>
+          </div>
+          <div class="input-group mb-3">
+            <input id="NumeroCasaParticular" type="number" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <span class="input-group-text" id="basic-addon2">Numero</span>
+          </div>
+          <div class="input-group mb-3">
+            <input id="metrosCasaParticular" type="number" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <span class="input-group-text" id="basic-addon2">Metros</span>
+          </div>
+          <div class="input-group mb-3">
+            <input id="CodigoCasaParticular" type="number" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <span class="input-group-text" id="basic-addon2">Codigo Postal</span>
+          </div>
+          <div class="input-group mb-3">
+            <select id="selectZonasUrbanasCasas"class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="comboZonasViviendas" aria-describedby="basic-addon2" ></select>
+            
+            <span class="input-group-text" id="basic-addon2">Zona Urbana</span>
+          </div>
+          <div class="input-group mb-3 text-center d-flex justify-content-center">
+            <button id="btnAnadirCasaBD" type="submit" class="btn btn-primary btn-lg">Añadir Casa</button>
+          </div>
+          
+        </div>
+      </div>
+    </form>
+    </div>
+  <!--Añadir casa particular--> 
+
+   <!--Añadir Piso--> 
+   <div id="divAnadirPiso">
+    <form>
+    <div class="row d-flex justify-content-center ">
+      <div class="col-lg-10 col-10   text-center mt-5 mb-5 card">
+        <h1>Añadir Piso</h1>
+        <div class="input-group mb-3">
+          <input id="CallePiso" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <span class="input-group-text" id="basic-addon2">Calle</span>
+        </div>
+        <div class="input-group mb-3">
+          <input id="NumeroPiso" type="number" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <span class="input-group-text" id="basic-addon2">Numero</span>
+        </div>
+        <div class="input-group mb-3">
+          <input id="EscaleraPiso" type="number" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <span class="input-group-text" id="basic-addon2">Escalera</span>
+        </div>
+        <div class="input-group mb-3">
+          <input id="PlantaPiso" type="number" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <span class="input-group-text" id="basic-addon2">Planta</span>
+        </div>
+        <div class="input-group mb-3">
+          <input id="PuertaPiso" type="number" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <span class="input-group-text" id="basic-addon2">Puerta</span>
+        </div>
+        <div class="input-group mb-3">
+          <input id="metrosPiso" type="number" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <span class="input-group-text" id="basic-addon2">Metros</span>
+        </div>
+        <div class="input-group mb-3">
+          <input id="CodigoPiso" type="number" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <span class="input-group-text" id="basic-addon2">Codigo Postal</span>
+        </div>
+        <div class="input-group mb-3">
+          <select id="selectZonasUrbanasPisos" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="comboZonasViviendas" aria-describedby="basic-addon2" ></select>
+          
+          <span class="input-group-text" id="basic-addon2">Zona Urbana</span>
+        </div>
+        <div class="input-group mb-3 text-center d-flex justify-content-center">
+          <button id="btnAnadirPisoBD" type="submit" class="btn btn-primary btn-lg">Añadir Piso</button>
+        </div>
+        
+      </div>
+    </div>
+  </form>
+  </div>
+<!--Añadir Piso--> 
+
+  <!--Lista viviendas Modificar--> 
+
+  <!--Mis Viviendas -->
+  <div id="tablaMisViviendasCasa">
+    <div class="row d-flex justify-content-center ">
+      <div class="col-lg-10 col-10 text-center mt-5 mb-5 card">
+        <h1>Casas</h1>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Calle</th>
+          <th scope="col">Numero</th>
+          <th scope="col">Subir Foto</th>
+          <th scope="col">Fotos</th>
+        </tr>
+      </thead>
+      <tbody id="cuerpoTablaCasa">
+        
+      
+      </tbody>
+    </table>
+    <p>Comprar Casa: <select id="selectCasasComprar" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" aria-describedby="basic-addon2" ></select><button type="button" class="btn btn-primary" id="btnComprarCasa">Comprar</button></p>
+  </div>
+  
+    </div>
+  </div>
+
+  <div id="tablaMisViviendasPiso">
+    <div class="row d-flex justify-content-center ">
+    <div class="col-lg-10 col-10 text-center mt-5 mb-5 card">
+    <h1>Pisos</h1>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Calle</th>
+          <th scope="col">Numero</th>
+          <th scope="col">Escalera</th>
+          <th scope="col">Planta</th>
+          <th scope="col">Subir Foto</th>
+          <th scope="col">Fotos</th>
+        </tr>
+      </thead>
+      <tbody id="cuerpoTablaPiso">
+        
+      </tbody>
+    </table>
+    <p>Comprar Piso: <select id="selectPisosComprar" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" aria-describedby="basic-addon2" ></select><button type="button" class="btn btn-primary" id="btnComprarPiso">Comprar</button></p>
+  </div>
+</div>
+</div>
+
+  <!--Mis Viviendas --> 
+
+  <!--Listado Propietarios -->
+  <div id="formDatosListadoPropietarios">
+   
+      <div class="row d-flex justify-content-center text-center mt-5 ">
+        <h1 id="campoInformacionPropietarios"></h1>
+        <div class="col-12 col-lg-10 text-center  ">
+          <select id="comboZonasPropietario" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <option selected>Seleccione una Zona</option>
+          </select>
+        </div>
+        <div class="col-12 col-lg-10 text-center  ">
+          <select id="comboCallePropietario" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <option selected>Seleccione una Calle</option>
+          </select>
+        </div>
+        <div class="col-12 col-lg-10 text-center  ">
+          <select id="comboNumeroPropietario" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <option selected>Seleccione un Numero</option>
+          </select>
+        </div>
+        <div class="col-12 col-lg-10 text-center mt-5 mb-5 ">
+          <button id="obtenerPropietarios" class="btn btn-outline-primary"  >Obtener propietarios</button>
+        </div>
+        <div class="col-12 col-lg-10 text-center mt-5 mb-5 card">
+        <div id="tablaListadoPropietarios">
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">DNI</th>
+                <th scope="col">Calle</th>
+                <th scope="col">Numero</th>
+                <th scope="col">Nombre Zona</th>
+              </tr>
+            </thead>
+            <tbody id="cuerpoTablaPropietarios">
+              
+            </tbody>
+          </table>
+        </div>
+        </div>
+      </div>
+  
+  </div>
+
+
+  
+
+  <!--Listado Propietarios --> 
+
+  <!--Busqueda usuarios --> 
+  <div id="divUsuariosEncargado">
+      <div class="row d-flex justify-content-center  ">
+        <div class="col-10 col-lg-10 text-center mt-5 mb-5  ">
+          <h1>Busqueda Usuarios</h1>
+          <select id="comboUsuariosEncargado" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <option selected>Seleccione un Usuario</option>
+          </select>
+        </div>
+        <div class="col-10 col-lg-10 text-center  ">
+          <select id="comboUsuariosFunciones" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <option selected>Seleccione una funcion</option>
+            <option  value="Datos">Datos</option>
+            <option value="Viviendas">Viviendas</option>
+            <option value="Familia">Familia</option>
+          </select>
+        </div>
+
+        <div id="funcionesUsuarioEncargado"class="col-12 col-lg-10 text-center card  ">
+         
+        </div>
+
+  </div>
+  </div>
+
+
+  <!--Busqueda usuarios --> 
+
+  <!--Modificar titularidad--> 
+
+  <div id="divTitularidadEncargado">
+    <div class="row d-flex justify-content-center  ">
+      <div class="col-10 col-lg-10 text-center mt-5 mb-5  ">
+        <div id="divTitularidad" class="col-12 col-lg-10 text-center card  ">
+         
+        </div>
+      </div>
+
+</div>
+
+</div>
+
+  <!--Modificar titularidad--> 
+    
+<!--Diseño principal-->
+<div id="diseñoPrincipal">
+  <div class="row d-flex justify-content-center text-center ">
+    <div class="col-lg-10 col-12 text-center mt-5 mb-5 ">
+  <h1 class="floating-text">Gestor De Propiedades y Propietarios</h1>
+    </div>
+    <div class="col-lg-4 col-12 text-center mt-5 mb-5 ">
+      <div id="carouselExampleControlss" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./fotos/family-home-296516_1280.png" class="w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./fotos/sketch-5146141_1280.png" class="w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./fotos/architecture-2027459_1280.png" class="w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlss" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlss" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    
+  </div>
+  
+  </div>
+</div>
+  <!--Diseño principal-->
+
+ <!--Familias Admin--> 
+  <div id="formDatosAdminFamilias">
+    <form class="formulario mt-5 mb-1 " id="" name="">
+      <div class="row d-flex justify-content-center text-center ">
+        <h1>Listado Familias</h1>
+        <div class="col-lg-10 col-12 text-center mt-5 mb-5 ">
+          <select id="comboFamiliaAdmin" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <option selected>Seleccione una Familia</option>
+          </select>
+          <div id="tablaMiembrosFamiliasAdmin" class="mt-5 card">
+   
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Dni</th>
+                  <th scope="col">Nombre Persona</th>
+                  <th scope="col">Apellidos Persona</th>
+                  <th scope="col">Editar</th>
+                </tr>
+              </thead>
+              <tbody id="cuerpoFamiliasAdmin">
+                
+              </tbody>
+            </table>
+            </div>
+          <!--Familias Admin--> 
+        </div>
+  </form>
+  
+  
+  </div>
+
+
+
+
+ </div>
+</body>
+</html>
+<script src="jspdf/dist/jspdf.min.js"></script>
+<script src="principal.js"></script>
